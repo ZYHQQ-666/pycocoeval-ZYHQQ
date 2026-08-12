@@ -1,0 +1,5 @@
+numpy
+prettytable
+
+[all]
+matplotlib>=2.1.0
