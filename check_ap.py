@@ -49,6 +49,7 @@ coco_eval.summarize()
 sys.stdout = old_stdout
 
 # 3. 严格验证 AP@75，因为如果你底层算出是 0.6，AP@75 必定直接挂掉（等于 0.0）
+# AP@50 的判定规则是：只要预测框和真实框的 IoU 大于或等于 0.5，建议对比ap50:95或者ap75
 actual_ap_75 = coco_eval.stats[0] # 0:ap50:95; 1:ap50; 2:ap75
 expected_ap_75 = 1.0 # 因为我们给的测试数据是完全重合的框，所以无论哪个ap都要取1
 
